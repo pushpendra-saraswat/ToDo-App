@@ -8,7 +8,7 @@ import './List.css';
 
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-function List({task,index,completetask,removeTask,editTask}) {
+function List({task,index,completetask,removeTask,handleedit}) {
   return (
     <div className='list-item'>
         
@@ -16,7 +16,7 @@ function List({task,index,completetask,removeTask,editTask}) {
           onClick={() => completetask(index)}/>
         
        <h3 style={{ textDecoration: task.completed ? "line-through" : "" }}>{task.title}</h3>
-          <button className='btn'onClick={() => editTask(index)}><BorderColorIcon  /></button> 
+          <button className='btn'onClick={() => handleedit(index)}><BorderColorIcon  /></button> 
           <button className='btn'onClick={() => removeTask(index)} ><DeleteForeverIcon /></button>
 
         
