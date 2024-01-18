@@ -1,0 +1,27 @@
+
+.list-item{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    /* height: 50px; */
+    background-color: lightblue;
+    width: 500px;
+    border-radius: 5px;
+
+    
+}
+h3{ 
+    width: 70%;
+   border: 2px solid black;
+   margin: 5px;
+   padding: 5px;
+   color: grey;
+   border-radius: 5px;
+   flex-wrap: wrap;
+}
+.btn{
+    margin: 5px;
+    color: aqua;
+    background-color: black;
+    border: 1px lightskyblue;
+}

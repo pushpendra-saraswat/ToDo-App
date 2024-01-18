@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pages{
+    background-color: black;
+    height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   
+    /* justify-content: center;
+    align-items: center; */
+    
+   
+}
+.pages-right{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+   align-items: center;
+  
+  
+}
+
+.pages-left{
+    /* background: url(../images/21077233-removebg-preview\ 1-removebg-preview.jpg), lightgray 50% ; */
+    display: flex;
+    margin: auto;
+    width: 732px;
+    height: 736px;
+    flex-shrink: 0;
+    background-color: black;
+
+}
+img{
+    margin: auto;
+   
+}
+h1{
+    color: aqua;
+    font-size: 50px;
+}
