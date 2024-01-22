@@ -74,19 +74,20 @@ import { useState } from 'react';
 function Pages() {
     const [tasks, setTasks] = useState([]);
     const [editedTask, setEditedTask] = useState({ title: '', index: null });
+    const [inputText, setInputText] = useState("");
 
     const addlist = title => {
         if (editedTask.index !== null) {
-           
+
             const newTasks = [...tasks];
-            newTasks[editedTask.index] = { title, completed: false, editable: false };
+            newTasks[editedTask.index] = { title, completed: false };
             setTasks(newTasks);
             setEditedTask({ title: '', index: null });
-          } else {
-            
-            const newTask = { title, completed: false, editable: false };
+        } else {
+
+            const newTask = { title, completed: false };
             setTasks([...tasks, newTask]);
-          }
+        }
     };
     const completetask = index => {
 
@@ -110,7 +111,8 @@ function Pages() {
     const handleedit = index => {
         const taskToEdit = tasks[index];
         setEditedTask({ title: taskToEdit.title, index });
-      };
+        setInputText(taskToEdit.title);
+    };
 
     return (
         <div className='pages'>
@@ -118,7 +120,7 @@ function Pages() {
 
             <div className='pages-right'>
                 <h1>List-Items</h1>
-                <Create addlist={addlist} editedTask={editedTask} />
+                <Create addlist={addlist} editedTask={editedTask} inputText={inputText} setInputText={setInputText} />
                 {
                     tasks.map((task, index) =>
 
