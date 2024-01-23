@@ -4,6 +4,7 @@
 }
 .pages{
     background-color: black;
+    
     height: 100vh;
    display: flex;
    justify-content: space-between;
@@ -14,11 +15,18 @@
    
 }
 .pages-right{
+
     display: flex;
+    
     flex-direction: column;
+    width: 732px;
+    height: min-content;
     padding: 50px;
    align-items: center;
-  
+   border: 10px solid aqua;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
   
 }
 

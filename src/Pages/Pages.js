@@ -98,7 +98,9 @@ function Pages() {
     };
     const removeTask = index => {
         const newtask = [...tasks];
+       
         newtask.splice(index, 1);
+       
         setTasks(newtask);
     };
     // const edittask = index => {
